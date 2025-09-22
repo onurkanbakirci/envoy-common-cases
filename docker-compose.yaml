@@ -1,4 +1,5 @@
 services:
+
   service-1:
     container_name: service-1
     image: hashicorp/http-echo:latest
@@ -6,6 +7,7 @@ services:
       - envoy-network
     environment:
       - ECHO_TEXT="hello world! service-1"
+
   service-2:
     container_name: service-2
     image: hashicorp/http-echo:latest
@@ -13,6 +15,7 @@ services:
       - envoy-network
     environment:
       - ECHO_TEXT="hello world! service-2"
+
   envoy:
     image: envoyproxy/envoy:tools-v1.35-latest
     ports:
